@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+{% block ab %}
+    <section class="content-header">
+        <h1>
+            Gérer
+            <small>Modules</small>
+        </h1>
+    </section>
+{% endblock %}
+{% block body %}
+    <table class="table" >
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Libelle</th>
+            <th scope="col">Date D</th>
+            <th scope="col">mass </th>
+            <th scope="col">Description</th>
+            <th scope="col">Details</th>
+            <th scope="col">Modifier</th>
+            <th scope="col">Supprimer</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for mdl in mdls %}
+            <tr>
+                <th scope="row">{{ mdl.codemo }}</th>
+                <td>{{ mdl.libellemo }}</td>
+                <td>{{ mdl.datemo }}</td>
+                <td>{{ mdl.massehmo }}</td>
+                <td>{{ mdl.descmo }}</td>
+                <td><a href="{{ path('detail_mdl', {'id':mdl.codemo})  }}"><img src="dist/img/detail.png " width="30px" height="30px"></a></td>
+                <td><a href="#"><img src="dist/img/icon.png " width="30px" height="30px"></a></td>
+                <td><a href="{{ path('delete_mdl', {'id':mdl.codemo})  }}"><img src="dist/img/delete.png " width="30px" height="25px"></a></td>
+
+            </tr>
+
+        {% endfor %}
+
+
+        </tbody>
+    </table>
+
+
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        <div class="container col-md-6 "name="" style="margin-left: 250px">
+            <h2 class="text-center" style="color: #0a0a0a; font-family: 'Harlow Solid Italic'">Seance DETAILS</h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Code Groupe : {{ mdl.codemo }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> date seance : {{ snc.datese | date('F j, Y') }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> heure debut seance : {{ snc.heuredbse | date('h , m') }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> heure fin seance : {{ snc.heurefnse | date('h , m')}} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> resume seance : {{ snc.resmmese }} </h2>
+            <a href="{{ path('seance_liste') }}" class="btn btn-primary btn-block">Back to Stagiaire</a>
+        </div>
+    {% endblock %}

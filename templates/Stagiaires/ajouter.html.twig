@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block ab %}
+    <section class="content-header">
+        <h1>
+            Ajouter
+            <small>Stagiaire</small>
+        </h1>
+    </section>
+    <form method="post" action="" class="container col-md-6 " style="margin-left: 250px" >
+        <div><label class="form-check-label">code groupe</label>
+            <input type="number" name="code" placeholder="code groupe....." class="form-control"></div>
+        <div><label class="form-check-label">nom</label>
+            <input type="text" name="nom" placeholder="nom....." class="form-control" /></div>
+        <div><label class="form-check-label">prenom</label>
+            <input type="text" name="prenom" placeholder="prenomst ..." class="form-control" /></div>
+        <div><label class="form-check-label">date naissance</label>
+            <input type="date" name="daten" class="form-control" /></div>
+        <div><label class="form-check-label">sexe</label>
+            <input type="text" name="sexe" placeholder="sexe....." class="form-control"></div>
+        <div><label class="form-check-label">email</label>
+            <input type="email" name="email" placeholder="email....." class="form-control"></div>
+        <div><label class="form-check-label">phone</label>
+            <input type="number" name="phone" placeholder="phone....." class="form-control"></div>
+        <div><label class="form-check-label">cin</label>
+            <input type="text" name="cin" placeholder="cin....." class="form-control"></div>
+        <div><label class="form-check-label">pic</label>
+            <input type="file" name="pic"  class="form-control"></div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">zafqzg</button>
+    </form>
+{% endblock %}

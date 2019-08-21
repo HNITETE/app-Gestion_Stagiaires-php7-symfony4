@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block ab %}
+    <section class="content-header">
+        <h1>
+            Gérer
+            <small>Examens</small>
+        </h1>
+    </section>
+{% endblock %}
+{% block body %}
+    <table class="table" >
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Date</th>
+            <th scope="col">Type</th>
+            <th scope="col">Details</th>
+            <th scope="col">Modifier</th>
+            <th scope="col">Supprimer</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for exm in exms %}
+            <tr>
+                <th scope="row">{{ exm.codeex }}</th>
+                <td>{{ exm.dateex | date('F j, Y') }}</td>
+                <td>{{ exm.typeex }}</td>
+                <td><a href="#"><img src="dist/img/detail.png " width="30px" height="30px"></a></td>
+                <td><a href="#"><img src="dist/img/icon.png " width="30px" height="30px"></a></td>
+                <td><a href="#"><img src="dist/img/delete.png " width="30px" height="25px"></a></td>
+
+            </tr>
+
+        {% endfor %}
+
+
+        </tbody>
+    </table>
+
+
+
+{% endblock %}

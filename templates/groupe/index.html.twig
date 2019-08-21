@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+{% block ab %}
+    <section class="content-header">
+        <h1>
+            Gérer
+            <small>Groupes</small>
+        </h1>
+    </section>
+{% endblock %}
+{% block body %}
+    <table class="table" >
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Libelle</th>
+            <th scope="col">Niveau</th>
+            <th scope="col">Année </th>
+            <th scope="col">Fillier</th>
+            <th scope="col">Details</th>
+            <th scope="col">Modifier</th>
+            <th scope="col">Supprimer</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for grp in grps %}
+            <tr>
+                <th scope="row">{{ grp.codegr }}</th>
+                <td>{{ grp.libellegr }}</td>
+                <td>{{ grp.niveauxgr }}</td>
+                <td>{{ grp.anneescogr }}</td>
+                <td>{{ grp.fillieregr }}</td>
+                <td><a href="{{ path('detail_grp', {'id':grp.codegr})  }}"><img src="dist/img/detail.png " width="30px" height="30px"></a></td>
+                <td><a href="{{ path('edit_grp', {'id':grp.codegr})  }}"><img src="dist/img/icon.png " width="30px" height="30px"></a></td>
+                <td><a href="{{ path('delete_grp', {'id':grp.codegr})  }}"><img src="dist/img/delete.png " width="30px" height="25px"></a></td>
+
+            </tr>
+
+        {% endfor %}
+
+
+        </tbody>
+    </table>
+
+
+
+{% endblock %}

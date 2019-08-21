@@ -1,0 +1,19 @@
+{% extends "security/registration.html.twig" %}
+{% block body %}
+    <center><div class=" text-white bg-success mb-3" style="max-width: 18rem;">
+            <h3 class="card-header info-color white-text text-center py-4">
+                <strong>Se Connecte</strong>
+            </h3>
+        </div></center>
+    <form action="{{ path('security_connection') }}" method="post" class="container">
+        <div class="form-group">
+            <b>Adresse email </b><input placeholder="" type="text" class="form-control" required name="_username">
+        </div>
+        <div class="form-group">
+            <b>Mot de pass </b><input placeholder="" type="password" class="form-control" required name="_password">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-success btn-rounded btn-block z-depth-0 my-4 waves-effect"><b>Connexion ! </b></button>
+        </div>
+    </form>
+{% endblock %}

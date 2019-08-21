@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block ab %}
+    <section class="content-header">
+        <h1>
+            Ajouter
+            <small>Seance</small>
+        </h1>
+    </section>
+    <form method="post" action="" class="container col-md-6 " style="margin-left: 250px" >
+        <div><label class="form-check-label">code module</label>
+            <input type="number" name="codemo" class="form-control"></div>
+
+        <div><label class="form-check-label">date seance</label>
+            <input type="date" name="datese" class="form-control"></div>
+
+        <div><label class="form-check-label">heure debut</label>
+            <input type="time" name="heured" class="form-control"></div>
+
+        <div><label class="form-check-label">heure fin</label>
+            <input type="time" name="heuref" class="form-control"></div>
+
+        <div><label class="form-check-label">resumer seance</label>
+            <textarea name="resume"  class="form-control"></textarea></div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">zafqzg</button>
+    </form>
+{% endblock %}

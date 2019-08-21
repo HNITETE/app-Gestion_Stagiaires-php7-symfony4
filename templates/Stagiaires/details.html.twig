@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        <div class="container col-md-6 "name="" style="margin-left: 250px">
+            <h2 class="text-center" style="color: #0a0a0a; font-family: 'Harlow Solid Italic'">Stagiaire DETAILS</h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Code Stagiaire  : {{ stg.codest }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Nom Stagiaire : {{ stg.nomst }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Prenom Stagiaire : {{ stg.prenomst }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Sexe Stagiaire : {{ stg.sexest }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Email Stagiaire : {{ stg.email }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Fillier Stagiaire : {{ grp.fillieregr }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Code Groupe : {{ grp.codegr }} </h2>
+            <a href="{{ path('blog') }}" class="btn btn-primary btn-block">Back to Stagiaire</a>
+        </div>
+{% endblock %}

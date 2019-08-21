@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block ab %}
+    <section class="content-header">
+        <h1>
+            Ajouter
+            <small>Examen</small>
+        </h1>
+    </section>
+    <form method="post" action="" class="container col-md-6 " style="margin-left: 250px" >
+        <div><label class="form-check-label">code seance</label>
+            <input type="number" name="codese" placeholder="code seance....." class="form-control"></div>
+
+        <div><label class="form-check-label">Date examen</label>
+            <input type="date" name="dateex"  class="form-control" /></div>
+
+        <div><label class="form-check-label">type exam</label>
+            <input type="text" name="typeex" placeholder="prenomst ..." class="form-control" /></div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">zafqzg</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block ab %}
+    <section class="content-header">
+        <h1>
+            Ajouter
+            <small>Module</small>
+        </h1>
+    </section>
+    <form method="post" action="" class="container col-md-6 " style="margin-left: 250px" >
+        <div><label class="form-check-label">code groupe</label>
+            <input type="number" name="code" placeholder="code groupe....." class="form-control"></div>
+
+        <div><label class="form-check-label">libelle module</label>
+            <input type="text" name="libelle" placeholder="libelle....." class="form-control" /></div>
+
+        <div><label class="form-check-label">date module</label>
+            <input type="date" name="datemo" placeholder="prenomst ..." class="form-control" /></div>
+
+        <div><label class="form-check-label">description</label>
+            <input type="text" name="desc" class="form-control" /></div>
+
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">zafqzg</button>
+    </form>
+{% endblock %}

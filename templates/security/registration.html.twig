@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}bounjour!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link href="{{ asset('css/Bootstrap.min.css') }}" rel="stylesheet" >
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <ul class="nav ">
+        <li><a href="{{ path('security_registration') }}">inscription</a></li>
+        <li><a href="{{ path('security_connection') }}">Se connecter</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+</div>
+
+{% block body %}
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+<center><div class=" text-white bg-info mb-3" style="max-width: 18rem;">
+<h3 class="card-header info-color white-text text-center py-4">
+    <strong>Subscribe</strong>
+</h3>
+</div></center>
+{{ form_start(form) }}
+<div class="my-custom-class-for-errors">
+    {{ form_errors(form) }}
+</div>
+<div class="container">
+        {{ form_row(form.username, {label_attr: {class: 'checkbox-custom'} }) }}
+
+        {{ form_row(form.email, {label_attr: {class: 'radio-custom'} }) }}
+
+        {{ form_row(form.password, {label_attr: {class: 'radio-custom'} }) }}
+
+        {{ form_row(form.fullName, {label_attr: {class: 'radio-custom'} }) }}
+
+        {{ form_row(form.description, {label_attr: {class: 'radio-custom'} }) }}
+
+        {{ form_row(form.img, {label_attr: {class: 'radio-custom'} }) }}
+
+    <div>
+        <button type="submit" class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect"><b>inscription ! </b></button>
+    </div>
+
+</div>
+{{ form_end(form) }}
+{% endblock %}
+</body>
+</html>

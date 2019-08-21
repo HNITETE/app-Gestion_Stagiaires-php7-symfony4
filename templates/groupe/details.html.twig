@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container col-md-6 "name="" style="margin-left: 250px">
+    <h2 class="text-center" style="color: #0a0a0a; font-family: 'Harlow Solid Italic'">Groupe DETAILS</h2>
+    <h2 class="page-header" style="color: #0a0a0a"> Code Groupe  : {{ grp.codegr }} </h2>
+    <h2 class="page-header" style="color: #0a0a0a"> Libelle Groupe : {{ grp.libellegr }} </h2>
+    <h2 class="page-header" style="color: #0a0a0a"> Niveau Groupe : {{ grp.niveauxgr }} </h2>
+    <h2 class="page-header" style="color: #0a0a0a"> annee scolaire : {{ grp.anneescogr }} </h2>
+    <h2 class="page-header" style="color: #0a0a0a"> Fillier Groupe : {{ grp.fillieregr }} </h2>
+        <a href="{{ path('groupe_liste') }}" class="btn btn-primary btn-block">Back to Groupe</a>
+    </div>
+{% endblock %}

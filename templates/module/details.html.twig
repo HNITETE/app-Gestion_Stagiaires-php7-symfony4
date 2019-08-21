@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        <div class="container col-md-6 "name="" style="margin-left: 250px">
+            <h2 class="text-center" style="color: #0a0a0a; font-family: 'Harlow Solid Italic'">Module DETAILS</h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Code Module  : {{ mdl.codemo }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Libelle Module : {{ mdl.libellemo }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Date  Module : {{ mdl.datemo }} </h2>
+            <h2 class="page-header" style="color: #0a0a0a"> Description Module : {{ mdl.descmo }} </h2>
+
+            <h2 class="page-header" style="color: #0a0a0a"> Code Groupe : {{ grp.codegr }} </h2>
+            <a href="{{ path('module_liste') }}" class="btn btn-primary btn-block">Back to Stagiaire</a>
+        </div>
+    {% endblock %}
